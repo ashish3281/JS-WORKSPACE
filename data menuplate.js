@@ -35,3 +35,13 @@ for(let i=0;i<10;i++){
     console.log("i is",i)
 }
 console.log("updated isExit",counter);
+var namen ="sfsd bgeg egegv yjtj hedh";
+console.log("substring is ",namen.substr(7,9))
+var text ="you are you are"
+var x=text.replace('you','we');
+console.log("after replaceing :",x)
+var y=text.replaceAll('you','we');
+console.log("after replaceing :",y)
+
+var result =namen.split(' ')
+console.log("convert into array",result)

@@ -37,3 +37,45 @@ var b="second_name";
 console.log("conat result is",a+b);
 console.log("hello")
 
+
+//ascii table --a=97,b=98  according to table
+var string1='a';
+var string2='b';
+if(string1>string2){
+    console.log("a is greater than b")
+}
+else if(string1<string2){
+    console.log("b is greater than a")
+}
+else{
+    console.log("error")
+}
+
+//charcter by charcter compare(a=a,a<b string 2 is greaTER not go to third)
+var string1='aaz';
+var string2='abb';
+if(string1>string2){
+    console.log("1 is greater than 2")
+}
+else if(string1<string2){
+    console.log("2 is greater than 1")
+}
+else{
+    console.log("error")
+}
+
+var string1='a';
+var string2='ab';
+if(string1>string2){
+    console.log("1 is greater than 2")
+}
+else if(string1<string2){
+    console.log("2 is greater than 1")
+}
+else{
+    console.log("error")
+}
+
+// var x="ahgjh"
+// var y="ss"
+// var x=name1.replace()
