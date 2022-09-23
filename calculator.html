@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   var op= prompt('Enter operator(+,-,*,/ or %): ');
+   var n1= parseFloat(prompt('Enter the first number : '));
+    var n2=parseFloat(prompt('Enter the second number : '));
+    var output;
+    if(op=='+'){
+        output=n1+n2;
+    }
+    else if(op == '-'){
+        output=n1-n2;
+    }
+    else if(op== '*'){
+        output=n1*n2;
+    }
+    else if(op== '/'){
+        output=n1/n2;
+    }
+    else if(op== '%'){
+        output=n1%n2;
+    }
+    else{
+        output="Wrong input";
+    }
+    window.alert("result is"+" "+output);
+</script>
+</body>
+</html>
