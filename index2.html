@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dom3.js"></script>
+</head>
+<body onload="OneS()">
+    <h1 id="heading">Website layout and dom</h1>
+    <style>
+        .left{
+            background-color: aqua;
+        }
+        .right{
+            background-color: brown;
+        }
+        .center{
+            background-color: blueviolet;
+        }
+        .size{
+            font-size: smaller;
+        }
+        #one{
+            font-weight: bolder;
+        }
+        #two{
+            max-width: 50%;
+            max-height: 50%;
+        }
+    </style>
+    <div>
+        <div class="left">This is a section one</div>
+        <div class="right">This is a section two</div>
+        <div class="center">This is a section three</div>
+        <div class="left size" id="one">This is a section four</div>
+        <div class="center">This is a section five</div>
+    </div>
+    <br>
+    <br>
+   <div>
+    <form>
+        Name:<input type="text" name="Name"><br>
+        Age:<input type="number" name="Age"><br>
+        <input type="button" value="submit">
+    </form>
+   </div>
+   <img src="F:\web development\java script workspace\js practice\wp4075402-nepal-wallpapers.jpg" alt="simply" id="two">
+</body>
+</html>
