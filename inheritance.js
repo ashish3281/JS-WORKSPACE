@@ -1,50 +1,51 @@
-class car{
-   constructor(brand)//parametrised constructor
-   {
-       this.car=brand
-   }
-   present(){
-      return "car name is" + this.car
-   }
+
+// const employee={
+//     post :function(){
+//         return "a software developer";
+//     },
+//     changename :function(name){
+//     this.name=name;
+//     }
+// };
+//syntx1
+// var e1=Object.create(employee);
+// e1.name="kaushal";
+// e1.role="writer";
+// e1.changename("ram");
+// console.log(e1);
+
+//syntx2
+// var e1=Object.create(employee,{
+//     name:{value:"ashish"},
+//     role:{value:"programmer"},
+// })
+// e1.changename("goyal");
+// console.log(e1);
+
+
+//prototypal inheritance
+function employee(name,id,salary){
+    this.name=name;
+    this.id=id;
+    this.salary=salary;
 }
-class  ModelName extends car{
-    constructor(brand,model){
-        super(brand);//this.model=model
-    }
-    display(){
-        return this.present() + "car" +this.model
-    }
+employee.prototype.post=function(){
+    return (this.name+" "+"is a content creater");
 }
-let carName=new ModelName("maruti","swift");
-console.log(carName.display())
+var ashish=new employee("ashish",22232,100000);
+console.log(ashish);
+console.log(ashish.post());
 
-/////////////////////////////////////////////////////////////////////////////////ashish goyal
-// class Person{
-//     constructor(name){
-        
-        //     this.name=name;
-        //     this.lastname="test";
-        // }
-        // greeting(){
-        //     // console.log("the name is",this.name,"lastname" ,this.lastname);
-        //     //templete literal(`)
-        //     console.log(`the name is ${this.name} lastname ${this.lastname`});
-        // }
-    // class student extends Person{}
-    // let str1=new student('ss');
-    // str1.greeting(); call constructor use super keyword 
-        
-
-// ///////////////////////////////////////////////////////////////////////////////
-function Person(name,class1,age){
-    this.name=name,
-    this.class1=class1,
-    this.age=age
+function programmer(name,id,salary,language){
+    //inherit three property from employee
+    employee.call(this,name,id,salary);
+    this.language=language;
 }
-//to add anothor properties in function
-Person.prototype.marks = 12;
-var p1=new Person("raj",10,20)
-console.log(p1,p1.marks)
-//////////////////////////////////////////////////////////////////////////////////////
+var arun=new programmer("arun",22,20000,"js");
 
 
+//console.log(arun.post()) it give an error arun.post() is not a function
+programmer.prototype=Object.create(employee.prototype);
+programmer.prototype.constructor=programmer;
+console.log(arun);
+console.log(arun.post());
